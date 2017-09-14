@@ -45,8 +45,14 @@ class App extends Component {
   // Enter your code below:
   constructor(props) {
     super(props)
-
+    this.state = {
+      pilot: ""
+    }
   }
+
+  setPilot = newPilot => {
+    this.setState({ pilot: newPilot });
+  };
 
   render() {
     /*
@@ -59,6 +65,7 @@ class App extends Component {
 
         <Header title="Star Wars" subTitle="The Vehicles of Star Wars" />
         <SearchForm label="Enter your name, pilot." />
+        <h1> {this.state.pilot}</h1>
         {/*
         The App component needs the following:
          jumbotron section, form section, vehicle cards section.
