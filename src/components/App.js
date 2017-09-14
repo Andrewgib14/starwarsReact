@@ -1,5 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../styles/App.css';
+import SearchForm from './SearchForm.js';
+import VehicleList from './VehicleList.js';
+import Header from './Header.js';
 
 class App extends Component {
   // PROPS AND STATE
@@ -40,15 +43,22 @@ class App extends Component {
   // You will need the following values: name, model, manufacturer, class, passengers, crew, length, max speed, and cargo capacity.
   // Rendering: create a 'card' for each of the vehicles. consult the Bootstrap 4 docs for details.
   // Enter your code below:
+  constructor(props) {
+    super(props)
+
+  }
 
   render() {
     /*
     Store vehicles state in a variable.
     Map over this variable to access the values needed to render.
     */
-    })
+
     return (
       <div className="App">
+
+        <Header title="Star Wars" subTitle="The Vehicles of Star Wars" />
+        <SearchForm label="Enter your name, pilot." />
         {/*
         The App component needs the following:
          jumbotron section, form section, vehicle cards section.
